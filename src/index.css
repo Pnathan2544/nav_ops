@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+@keyframes dash-flow {
+  to {
+    stroke-dashoffset: -20;
+  }
+}
+
+.path-edge {
+  animation: dash-flow 0.5s linear infinite;
+}
+
+@keyframes pulse-node {
+  0%, 100% { r: 10; }
+  50% { r: 13; }
+}
+
+.node-pulse {
+  animation: pulse-node 1s ease-in-out infinite;
+}
